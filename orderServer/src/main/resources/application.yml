@@ -1,0 +1,16 @@
+server:
+  port: 9090
+
+spring:
+  application:
+    name: order-server
+
+eureka:
+  client:
+    service-url:
+      # eureka的注册中心地址
+      defaultZone: http://localhost:8081/eureka/
+
+feign:
+  circuitbreaker:
+    enabled: true

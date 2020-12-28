@@ -1,0 +1,28 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: zuul-server
+
+eureka:
+  client:
+    service-url:
+      # eureka的注册中心地址
+      defaultZone: http://localhost:8081/eureka/
+
+zuul:
+  routes:
+    api-a:
+      path: /user/**
+      url: http://localhost:9091
+#      service-id: user-server
+    api-b:
+      path: /order/**
+      url: http://localhost:9090
+#      service-id: order-server
+  host:
+    socket-timeout-millis: 60000
+    connect-timeout-millis: 60000
+
+debug: true
