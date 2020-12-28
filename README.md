@@ -1,9 +1,9 @@
 ## spring-cloud-demo
 
 	EurekaDemo	   注册中心服务
-	ZuulDemo			路由网关服务
-	UserServer		  用户服务
-	OrderServer		订单服务
+	ZuulDemo	   路由网关服务
+	UserServer	   用户服务
+	OrderServer	   订单服务
 	
 - #### Eureka 服务启动后，其他服务启动后则会注册到 Eureka 服务中
 - #### Zuul 服务启动后，可以由同一个url不同的前缀访问不同的业务服务
